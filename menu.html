@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | MAYURA 1989 Bar & Kitchen</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .menu-section {
+            padding: 80px 0;
+        }
+
+        .menu-category-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .menu-category-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--deep-red);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .menu-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 1.2rem;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .menu-item:hover {
+            border-color: var(--primary-gold);
+            transform: scale(1.02);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .item-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            color: var(--text-white);
+        }
+
+        .item-details p {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: var(--primary-gold);
+            font-size: 1rem;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+
+        .category-nav {
+            position: sticky;
+            top: 80px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--glass-border);
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .category-nav {
+                gap: 0.8rem;
+                padding: 0.5rem;
+            }
+
+            .category-link {
+                font-size: 0.85rem;
+                padding: 5px 10px;
+            }
+        }
+
+        .category-link {
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .category-link:hover {
+            color: var(--primary-gold);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MAYURA <span>1989</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="menu.html">Food Menu</a></li>
+                <li><a href="bar.html">Bar Menu</a></li>
+                <li><a href="index.html#ambience">Ambience</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="index.html#reserve" class="btn-primary desktop-only">Reserve Table</a>
+        </div>
+    </nav>
+
+    <header class="menu-hero">
+        <div class="container">
+            <h1 class="fade-up">Our Culinary Legacy</h1>
+            <p class="fade-up delay-1">A symmetric blend of tradition and luxury</p>
+        </div>
+    </header>
+
+    <div class="category-nav">
+        <a href="#signature" class="category-link">Signature</a>
+        <a href="#andhra-starters" class="category-link">Andhra Starters</a>
+        <a href="#tandoor" class="category-link">Tandoor</a>
+        <a href="#biryani" class="category-link">Biryani</a>
+        <a href="#main-nonveg" class="category-link">Main Non-Veg</a>
+        <a href="#main-veg" class="category-link">Main Veg</a>
+        <a href="#chinese" class="category-link">Chinese</a>
+        <a href="#breads" class="category-link">Breads</a>
+        <a href="#desserts" class="category-link">Desserts</a>
+    </div>
+
+    <section class="menu-section container">
+
+        <!-- Mayura Signature Starters -->
+        <div id="signature" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Mayura Signature Starters</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item reveal">
+                    <div class="item-details">
+                        <h4>Fish Pandumirchi/Pachimichi</h4>
+                        <p>Special Andhra green/red chilly marination</p>
+                    </div>
+                    <span class="item-price">₹349*</span>
+                </div>
+                <div class="menu-item reveal delay-1">
+                    <div class="item-details">
+                        <h4>Prawns Kothimeera/Karivepaku</h4>
+                        <p>Tossed with fresh coriander or curry leaves</p>
+                    </div>
+                    <span class="item-price">₹349*</span>
+                </div>
+                <div class="menu-item reveal delay-2">
+                    <div class="item-details">
+                        <h4>Chicken Pandumirchi/Pachimichi</h4>
+                        <p>Chef's special spicy chicken preparation</p>
+                    </div>
+                    <span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item reveal delay-3">
+                    <div class="item-details">
+                        <h4>Paneer Pandumirchi/Pachimichi</h4>
+                        <p>Spicy Andhra style paneer cubes</p>
+                    </div>
+                    <span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item reveal delay-4">
+                    <div class="item-details">
+                        <h4>Babycorn Pandumirchi/Pachimichi</h4>
+                        <p>Crispy babycorn in spicy marination</p>
+                    </div>
+                    <span class="item-price">₹299*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Andhra Starters -->
+        <div id="andhra-starters" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Classic Andhra Starters</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h4>Pomfret Ghee Roast (Full Fish)</h4><span class="item-price">₹469*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Anjal Fish Fry</h4><span class="item-price">₹469*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Squid Ghee Roast</h4><span class="item-price">₹369*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Prawns Pakodi</h4><span class="item-price">₹349*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Mutton Kheema Balls (6 Pcs)</h4><span class="item-price">₹349*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Mutton Ghee Roast</h4><span class="item-price">₹349*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Mutton Fry</h4><span class="item-price">₹349*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken Kabab</h4><span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Guntur Chicken</h4><span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Lemon Chicken Andhra Style</h4><span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken 65</h4><span class="item-price">₹299*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken Sholay Kabab</h4><span class="item-price">₹299*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken Kshatriya (3 Leg Pcs)</h4><span class="item-price">₹299*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken Roast</h4><span class="item-price">₹309*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chilly Chicken</h4><span class="item-price">₹289*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Gobi Sholay Kabab</h4><span class="item-price">₹299*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tandoor Starters -->
+        <div id="tandoor" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Tandoor Starters</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h4>Non-Veg Platter (14 Pcs)</h4><span class="item-price">₹1499*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Tandoori Chicken Full/Half</h4><span class="item-price">₹549/299*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Hariyali Murg Tikka</h4><span class="item-price">₹349*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken Tikka</h4><span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Kalmi Kabab</h4><span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Veg Platter (14 Pcs)</h4><span class="item-price">₹1299*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Paneer/Mushroom Tikka</h4><span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Hara Bara Kabab</h4><span class="item-price">₹299*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Brocolli Malai Kabab</h4><span class="item-price">₹299*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biryanis -->
+        <div id="biryani" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Andhra Style Biryanis</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-details">
+                        <h4>Pot Biryani (Veg/Chic/Mut)</h4>
+                    </div>
+                    <span class="item-price">₹699/799/899</span>
+                </div>
+                <div class="menu-item">
+                    <div class="item-details">
+                        <h4>Bamboo Biryani (Veg/Chic/Mut)</h4>
+                    </div>
+                    <span class="item-price">₹699/799/899</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Nellore Mutton Biryani</h4><span class="item-price">₹369*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chilly Chicken Biryani</h4><span class="item-price">₹369*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Nellore Chicken Biryani</h4><span class="item-price">₹329*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Course Non-Veg -->
+        <div id="main-nonveg" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Main Course Non-Veg (North Indian)</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h4>Anjal Fish Masala</h4><span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Mutton Rogan Josh</h4><span class="item-price">₹249*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Murg Patiala</h4><span class="item-price">₹249*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Butter Chicken</h4><span class="item-price">₹229*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken Kolapuri</h4><span class="item-price">₹219*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Egg Masala</h4><span class="item-price">₹189*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Course Veg -->
+        <div id="main-veg" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Main Course Veg (North Indian)</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h4>Kaju Masala</h4><span class="item-price">₹229*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Paneer Tikka/Butter/Masala</h4><span class="item-price">₹229*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Mushroom Tikka/Butter/Masala</h4><span class="item-price">₹229*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Dal Tomato / Dal Tadka</h4><span class="item-price">₹179*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chinese -->
+        <div id="chinese" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Indo-Chinese</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h4>Chicken Spring Roll</h4><span class="item-price">₹329*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken Drumsticks / Lollypop</h4><span class="item-price">₹309*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Scezhwan Chicken Fried Rice/Noodles</h4><span class="item-price">₹259*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Veg Fried Rice / Noodles</h4><span class="item-price">₹209*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breads -->
+        <div id="breads" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Indian Breads</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h4>Butter Naan / Garlic Naan</h4><span class="item-price">₹69/99*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Tandoori Roti / Butter Roti</h4><span class="item-price">₹59/69*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Lacha Paratha</h4><span class="item-price">₹69*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Aloo/Gobi Paratha</h4><span class="item-price">₹149*</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <div id="desserts" class="menu-category">
+            <div class="menu-category-title reveal">
+                <h2>Signature Desserts</h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h4>Rabdi Jamun</h4><span class="item-price">₹129*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Gulab Jamun (with Ice Cream)</h4><span class="item-price">₹99*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Gajar Ka Halwa</h4><span class="item-price">₹99*</span>
+                </div>
+                <div class="menu-item">
+                    <h4>Ice Creams</h4><span class="item-price">₹99*</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer footer-premium section-padding">
+        <div class="container">
+            <div class="footer-grid-premium">
+                <div class="footer-col reveal">
+                    <h2 class="logo">MAYURA <span>1989</span></h2>
+                    <p class="footer-desc">Redefining the Andhra culinary experience with a luxury rooftop vibe in the
+                        heart of Rajajinagar.</p>
+                    <div class="social-links-premium">
+                        <a href="https://www.instagram.com/mayura_1989/" class="social-icon" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/917411535145" class="social-icon" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/Mayura1989/" class="social-icon" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://goo.gl/maps/c6cb1c3609355f68" class="social-icon" target="_blank"><i
+                                class="fas fa-location-dot"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col reveal delay-1">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">Our Story</a></li>
+                        <li><a href="menu.html">Food Menu</a></li>
+                        <li><a href="bar.html">Bar Menu</a></li>
+                        <li><a href="index.html#reserve">Reservations</a></li>
+                        <li><a href="index.html#ambience">Ambience</a></li>
+                        <li><a href="index.html#reviews">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col reveal delay-2">
+                    <h3>Contact Us</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> 46/3 Dr Rajkumar Rd, 6th Block Rajajinagar, Bengaluru
+                            560010</p>
+                        <p><i class="fas fa-phone"></i> 7411535145</p>
+                        <p><i class="fas fa-envelope"></i> 1989mayura@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-col reveal delay-3">
+                    <h3>Experience Mayura</h3>
+                    <p class="hours">Mon - Sun: 11:00 AM - 11:30 PM</p>
+                    <div class="order-grid">
+                        <a href="https://www.zomato.com/bangalore/mayura-1989-rajajinagar-bangalore/order"
+                            class="order-pill pill-zomato" target="_blank">Zomato</a>
+                        <a href="https://www.swiggy.com/search?query=Mayura+1989" class="order-pill pill-swiggy"
+                            target="_blank">Swiggy</a>
+                        <a href="https://magicpin.in/Bangalore/Rajajinagar/Restaurant/Mayura-1989/store/1594c4a/menu/"
+                            class="order-pill pill-magicpin" target="_blank">Magicpin</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-premium">
+                <div class="divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 MAYURA 1989 Bar & Kitchen. Crafted for Excellence.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="https://wa.me/917411535145" class="float-btn float-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
